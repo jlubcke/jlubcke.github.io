@@ -1,0 +1,22 @@
+---
+layout: default
+title: Casa Lübcke
+---
+
+{% for post in site.posts limit:1 %}
+ 
+  <h2 class="title"><a href="{{ post.url }}" title="[Permalink] {{ post.title }}"> {{ post.title }} </a></h2>
+  <p class="byline"><small>Postat {{ post.date | date_to_string }}</small></p>
+  <div class="entry">
+    {{ post.content }}
+  </div>
+
+  <hr/>
+
+  <a rel="prev" href="{{ post.previous.url }}" 
+     title="View {{ post.previous.title }}"
+     >&larr; Tidigare...</a>
+{% endfor %}
+
+ 
+

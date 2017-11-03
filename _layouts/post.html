@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+{% if page.previous %}
+<span align="left">
+  <a rel="prev" href="{{ page.previous.url }}" 
+     title="View {{ page.previous.title }}"
+     >&larr; Tidigare</a>
+</span>
+{% endif %}
+{% if page.next %}
+<span align="right">
+  <a rel="next" href="{{ page.next.url }}" 
+     title="View {{ page.next.title }}"
+     >Senare &rarr;</a>
+</span>
+{% endif %}
+
+<h2 class="title"><a href="{{ post.url }}" title="[Permalink] {{ post.title }}"> {{ page.title }} </a></h2>
+<p class="byline"><small>Postat {{ page.date | date_to_string }}</small></p>
+
+<div class="entry">
+  {{ content }}
+</div>
+
+<hr/>
